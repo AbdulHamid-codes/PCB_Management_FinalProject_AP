@@ -9,7 +9,6 @@ import java.util.Date;
 import db.dbConnection;
 
 
-
 public class Series {
 	
 	private String format;
@@ -100,7 +99,7 @@ public class Series {
 	public void displayDetail() {
 		
 	}
-	private boolean checkFixtureOFMatch(Date d) {
+	public boolean checkFixtureOFMatch(LocalDate d) {
 		
 		for(Match m : matches) {
 			if(m.getDate()==d)

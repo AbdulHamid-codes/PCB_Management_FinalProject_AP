@@ -2,6 +2,7 @@ package application;
 
 import java.time.LocalDate;
 
+import CustomExceptions.EndDateGreaterThanStartDateException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -37,11 +38,15 @@ public class AdminScheduleDomTournamentController {
     }
 
     @FXML
-    void clickScheduleDom(ActionEvent event) {
+    void clickScheduleDom(ActionEvent event) throws Exception {
     	boolean flag;
     	int teams = Integer.parseInt(noOfTeams.getText());
     	LocalDate startD=startDateDomestic.getValue();
     	LocalDate endD=endDateDomestic.getValue();
+    	if(endD.isBefore(startD)) {
+    		domDateClashMessage.setText("End date cannot be earlier than start Date");
+    		throw new EndDateGreaterThanStartDateException("End date cannot be earlier than start Date");
+    	}
     	
     	DomesticTournament domT=new DomesticTournament();
     	domT.setNoOfTeams(teams);

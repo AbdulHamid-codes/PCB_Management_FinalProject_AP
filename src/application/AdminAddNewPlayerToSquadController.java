@@ -2,6 +2,7 @@ package application;
 
 import java.time.LocalDate;
 
+import CustomExceptions.InvalidShirtNoException;
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -63,13 +64,16 @@ public class AdminAddNewPlayerToSquadController {
 	    }
 
     @FXML
-    void clidkAddPlayerButtonInAddNP(ActionEvent event) {
+    void clidkAddPlayerButtonInAddNP(ActionEvent event) throws Exception {
     	int shirtNo = Integer.parseInt(playerShirtNo.getText());
     	String name = playerName.getText();
     	LocalDate dob=playerDOB.getValue();
     	String sqType=squadTypeInAddNewP.getValue();
     	String playerR=playerRole.getValue();
-    	
+    	 if(shirtNo<=0) {
+    		 messageInAddNewP.setText("Shirt Number should be greater than 0");
+    		 throw new InvalidShirtNoException("Shirt Number should be greater than 0");
+    	 }
     	boolean flag=false;
     	if(playerR.equals("Batsman")) {
     		Batsman b=new Batsman();

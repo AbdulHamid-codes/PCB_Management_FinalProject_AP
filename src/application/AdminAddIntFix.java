@@ -2,6 +2,7 @@ package application;
 
 import java.time.LocalDate;
 
+import CustomExceptions.EndDateGreaterThanStartDateException;
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,6 +46,10 @@ public class AdminAddIntFix {
     	LocalDate endD=matchDateIntTournament.getValue();
     	LocalDate startD=startDateIntTournament.getValue();
     	
+    	if(endD.isBefore(startD)) {
+    		messageInINTf.setText("End date cannot be earlier than start Date");
+    		throw new EndDateGreaterThanStartDateException("End date cannot be earlier than start Date");
+    	}
     	InternationalTournament intT=new InternationalTournament();
     	intT.setName(n);
     	intT.setEndDate(endD);

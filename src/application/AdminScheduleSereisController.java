@@ -2,6 +2,7 @@ package application;
 
 import java.time.LocalDate;
 
+import CustomExceptions.EndDateGreaterThanStartDateException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -52,7 +53,7 @@ public class AdminScheduleSereisController {
     }
 
     @FXML
-    void clickSchedule(ActionEvent event) {
+    void clickSchedule(ActionEvent event) throws Exception {
     	
     	boolean flag;
     	String hos=hostName.getText();
@@ -61,6 +62,10 @@ public class AdminScheduleSereisController {
     	LocalDate startD=startDate.getValue();
     	LocalDate endD=endDate.getValue();
     	
+    	if(endD.isBefore(startD)) {
+    		clashMessage.setText("End date cannot be earlier than start Date");
+    		throw new EndDateGreaterThanStartDateException("End date cannot be earlier than start Date");
+    	}
     	Series s = new Series(form, t, hos, startD, endD);
     	flag=s.Save();
     	

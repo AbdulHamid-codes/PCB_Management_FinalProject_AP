@@ -3,6 +3,7 @@ package application;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import CustomExceptions.MaxPlayerInSquadLimitSquad;
 import db.dbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -49,7 +50,10 @@ public class AdminCreateSquadController {
 
     	String type=squadTypeOptions.getValue().toString();
     	int p = Integer.parseInt(noOfPlayersInSquad.getText());
-    	
+    	if(p>30) {
+    		messageInCreateSq.setText("a Squad cannot have more than 30 players");
+    		throw new MaxPlayerInSquadLimitSquad("a Squad cannot have more than 30 players");
+    	}
     	Squad sq=new Squad(p, type);
     	
     	String s=sq.saveSquad();
