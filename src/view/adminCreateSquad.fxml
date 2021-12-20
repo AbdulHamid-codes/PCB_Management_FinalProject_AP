@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminCreateSquadController">
+   <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="208.0" layoutY="22.0" text="CREATE A SQUAD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="nextFromCreate" layoutX="215.0" layoutY="260.0" mnemonicParsing="false" onAction="#clicknextFromCreate" prefHeight="30.0" prefWidth="130.0" text="Create Squad" />
+            <Label layoutX="115.0" layoutY="154.0" text="Number of Players in Squad : " />
+            <Label layoutX="115.0" layoutY="104.0" text="Select Squad Type : " />
+            <TextField fx:id="noOfPlayersInSquad" layoutX="300.0" layoutY="150.0" promptText="Enter a number" />
+            <ChoiceBox fx:id="squadTypeOptions" layoutX="300.0" layoutY="100.0" prefWidth="150.0" />
+            <Label fx:id="messageInCreateSq" layoutX="185.0" layoutY="22.0" />
+            <Button fx:id="backFromCreate" layoutX="460.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickBackFromCreate" prefHeight="30.0" prefWidth="80.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

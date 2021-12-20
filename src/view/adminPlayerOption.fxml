@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPlayerOptionsController">
+   <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="215.0" layoutY="22.0" text="PLAYER OPTION" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="nextInPlayerOption" layoutX="470.0" layoutY="260.0" mnemonicParsing="false" onAction="#clicknNxtInPlayerOption" prefHeight="30.0" prefWidth="80.0" text="Next" />
+            <Label layoutX="150.0" layoutY="124.0" text="Select an Option :" />
+            <Label layoutX="185.0" layoutY="22.0" />
+            <ChoiceBox fx:id="selectPlayerOpt" layoutX="300.0" layoutY="120.0" prefWidth="150.0" />
+            <Button fx:id="backInPlayerOptions" layoutX="360.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickBackInPlayerOptions" prefHeight="30.0" prefWidth="80.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

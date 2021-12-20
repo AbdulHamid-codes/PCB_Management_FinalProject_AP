@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPlayerController">
+   <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="200.0" layoutY="22.0" text="BOWLER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="updateProfileButtonBowler" layoutX="195.0" layoutY="270.0" mnemonicParsing="false" onAction="#clickUpdateProfileBowlerr" prefHeight="30.0" prefWidth="170.0" text="Update Profile" />
+            <Label layoutX="115.0" layoutY="64.0" text="Enter the runs conceeded : " />
+            <TextField fx:id="runsConceeded" layoutX="288.0" layoutY="60.0" promptText="Enter the number" />
+            <Label layoutX="115.0" layoutY="114.0" text="Enter the balls bowled : " />
+            <TextField fx:id="ballsBowled" layoutX="288.0" layoutY="110.0" promptText="Enter the number" />
+            <Label layoutX="115.0" layoutY="164.0" text="Enter the wickets taken : " />
+            <TextField fx:id="wicketsTaken" layoutX="288.0" layoutY="160.0" promptText="Enter the number" />
+            <Label layoutX="115.0" layoutY="214.0" text="Enter the catches taken : " />
+            <TextField fx:id="catchesCaughtBowler" layoutX="288.0" layoutY="210.0" promptText="Enter the number" />
+            <Button fx:id="backInBowler" layoutX="470.0" layoutY="270.0" mnemonicParsing="false" onAction="#clickBackInBowler" prefHeight="30.0" prefWidth="80.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

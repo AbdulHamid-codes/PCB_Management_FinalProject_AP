@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPlayerController">
+  <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="246.0" layoutY="22.0" text="BATSMAN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="updateProfileBatsmen" layoutX="195.0" layoutY="260.0" mnemonicParsing="false" onAction="#updateProfileBatsmen" prefHeight="30.0" prefWidth="185.0" text="Update Profile" />
+            <Label layoutX="115.0" layoutY="84.0" text="Enter the runs scored : " />
+            <TextField fx:id="runsScored" layoutX="288.0" layoutY="80.0" promptText="Enter the number" />
+            <Label layoutX="115.0" layoutY="134.0" text="Enter the balls played : " />
+            <TextField fx:id="ballsPlayed" layoutX="288.0" layoutY="130.0" promptText="Enter the number" />
+            <Label layoutX="115.0" layoutY="184.0" text="Enter the catches taken : " />
+            <TextField fx:id="catchesTakenBatsmen" layoutX="288.0" layoutY="180.0" promptText="Enter the number" />
+            <Button fx:id="backInBatsman" layoutX="470.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickBackInBatsman" prefHeight="30.0" prefWidth="80.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

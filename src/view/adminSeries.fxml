@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminSeriesController">
+   <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="265.0" layoutY="22.0" text="SERIES" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="scheduleOption" layoutX="202.0" layoutY="108.0" mnemonicParsing="false" onAction="#clickScheduleOption" prefHeight="30.0" prefWidth="200.0" text="Schedule a Series" />
+            <Button fx:id="cancelSeriesOption" layoutX="202.0" layoutY="168.0" mnemonicParsing="false" onAction="#clickCancelSeriesOption" prefHeight="30.0" prefWidth="200.0" text="Cancel a Series" />
+            <Button fx:id="backInAdminSeries" layoutX="460.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickBackInAdminSeries" prefHeight="30.0" prefWidth="80.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

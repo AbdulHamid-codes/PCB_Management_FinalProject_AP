@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminRemovePlayerController">
+    <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="136.0" layoutY="22.0" text="REMOVE PLAYER FROM SQUAD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="324.0" prefWidth="600.0" style="-fx-background-color: lightcyan;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="removePlayerButton" layoutX="220.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickRemovePlayerButton" prefHeight="30.0" prefWidth="140.0" text="Remove Player" />
+            <Label layoutX="115.0" layoutY="155.0" text="Enter Player's Shirt Number :" />
+            <Label layoutX="115.0" layoutY="105.0" text="Select Squad Type : " />
+            <ChoiceBox fx:id="squadTypeInRemvovePlayer" layoutX="300.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label fx:id="messageInRemovePlayer" layoutX="185.0" layoutY="22.0" />
+            <Button fx:id="backInRemovePlayer" layoutX="460.0" layoutY="260.0" mnemonicParsing="false" onAction="#clickBackInRemovePlayer" prefHeight="30.0" prefWidth="80.0" text="Back" />
+            <TextField fx:id="shirtNoToRemove" layoutX="300.0" layoutY="150.0" promptText="Enter a number" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

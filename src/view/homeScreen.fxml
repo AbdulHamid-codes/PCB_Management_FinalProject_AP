@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeScreenController">
+   <top>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: DARKGREEN;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="73.0" layoutY="21.0" text="WELCOME TO PAKISTAN CRICKET BOARD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="325.0" prefWidth="203.0" style="-fx-background-color: LIGHTCYAN;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="vistorButton" layoutX="45.0" layoutY="160.0" mnemonicParsing="false" onAction="#clickVistorButton" prefHeight="40.0" prefWidth="120.0" text="Visitor" />
+            <Button fx:id="adminButton" layoutX="45.0" layoutY="80.0" mnemonicParsing="false" onAction="#clickAdminButton" prefHeight="40.0" prefWidth="120.0" text="Admin" />
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="280.0" prefWidth="298.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="327.0" fitWidth="404.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logoPcb.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
