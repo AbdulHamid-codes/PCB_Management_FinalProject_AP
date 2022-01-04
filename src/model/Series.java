@@ -109,6 +109,8 @@ public class Series {
 		return false;
 	}
 	
+	// This code has to be in DB handler of Squad
+	
 	public boolean Save() {
 		try {
 

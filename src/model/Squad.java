@@ -22,6 +22,7 @@ public class Squad {
 	public Squad(){
 		
 	}
+	// This code has to be in DB handler of Squad
 	public String saveSquad() {
 		try {
 

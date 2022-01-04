@@ -88,6 +88,7 @@ public abstract class Player {
 	
 	protected int manOfTheMatchAwards;
 	
+	// This code has to be in DB handler of player
 	public boolean savePlayer(String sq) {
 		try {
 

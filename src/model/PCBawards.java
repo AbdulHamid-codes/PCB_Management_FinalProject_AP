@@ -37,6 +37,8 @@ public class PCBawards {
 		this.winner = w;
 	}
 
+	// This code has to be in DB handler of awards
+	
 	public boolean save() {
 		try {
 
