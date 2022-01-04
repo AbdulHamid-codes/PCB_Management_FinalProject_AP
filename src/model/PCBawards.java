@@ -38,7 +38,6 @@ public class PCBawards {
 	}
 
 	// This code has to be in DB handler of awards
-	
 	public boolean save() {
 		try {
 
