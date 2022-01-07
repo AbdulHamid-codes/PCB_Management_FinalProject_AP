@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
+import db.SeriesDBhandler;
 import db.dbConnection;
 
 
@@ -109,41 +110,12 @@ public class Series {
 		return false;
 	}
 	
-	// This code has to be in DB handler of Squad
 	
 	public boolean Save() {
-		try {
 
-			Connection con=dbConnection.getConnection();
-			// the mysql insert statement
-//		      String query = " insert into savingsaccount (accountNumber, balance, dateCreated, interestRate)"
-//		        + " values (?, ?, ?, ?)";
-			String query1 = " insert into series (fromat,type, host, startDate, endDate)" + "Values(?, ?,?,?,?)";
-			
-			
-		      // create the mysql insert preparedstatement
-		      PreparedStatement preparedStmt = con.prepareStatement(query1);
-		      preparedStmt.setString   (1, this.format);
-		      preparedStmt.setString    (2, this.type);
-		      preparedStmt.setString    (3, this.host);
-		      preparedStmt.setObject    (4, this.startDate);
-		      preparedStmt.setObject   (5, this.endDate);
-		      
-		      // execute the preparedstateme
-		      preparedStmt.execute();
-		      
-		      return true;
-			//con.close();
-			
-		}
-		catch(Exception e) {
-			//System.out.println(e);
-			String s=e.getMessage();
-			System.out.println(s);
-			//messageInCreateSq.setText(s);
-			//return s;
-			return false;
-       }
+		SeriesDBhandler s=new SeriesDBhandler();
+		return s.save(this);
+		
 	}
 
 }

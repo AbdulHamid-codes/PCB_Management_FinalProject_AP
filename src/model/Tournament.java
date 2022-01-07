@@ -19,7 +19,6 @@ public abstract class Tournament {
 		this.name = name;
 	}
 
-
 	protected LocalDate startDate;
 	protected LocalDate endDate;
 	protected String winner;

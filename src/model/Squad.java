@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 
+import db.SquadDBhandler;
 import db.dbConnection;
 
 public class Squad {
@@ -24,31 +25,10 @@ public class Squad {
 	}
 	// This code has to be in DB handler of Squad
 	public String saveSquad() {
-		try {
-
-			Connection con=dbConnection.getConnection();
-			// the mysql insert statement
-//		      String query = " insert into savingsaccount (accountNumber, balance, dateCreated, interestRate)"
-//		        + " values (?, ?, ?, ?)";
-			String query = " insert into squad (type, noOfPlayers)" + "Values(?, ?)";
-			
-		      // create the mysql insert preparedstatement
-		      PreparedStatement preparedStmt = con.prepareStatement(query);
-		      preparedStmt.setString    (1, this.type);
-		      preparedStmt.setInt    (2, this.numOfPlayers);
-	
-		      // execute the preparedstateme
-		      preparedStmt.execute();
-
-			//con.close();
-			return "Successfully Created Squad";
-		}
-		catch(Exception e) {
-			//System.out.println(e);
-			String s=e.getMessage();
-			//messageInCreateSq.setText(s);
-			return s;
-       }
+		
+		SquadDBhandler s=new SquadDBhandler();
+		return s.save(this);
+		
 	}
 
 	public int getNumOfPlayers() {
@@ -71,33 +51,9 @@ public class Squad {
 	}
 
 	public boolean addPlayer(int shirt, String type) {
-		try {
-
-			Connection con=dbConnection.getConnection();
-			// the mysql insert statement
-//		      String query = " insert into savingsaccount (accountNumber, balance, dateCreated, interestRate)"
-//		        + " values (?, ?, ?, ?)";
-			String query = " insert into squad_player (squadType, shirtNo)" + "Values(?,?)";
-			
-		      // create the mysql insert preparedstatement
-		      PreparedStatement preparedStmt = con.prepareStatement(query);
-		      preparedStmt.setInt    (1, shirt);
-		      preparedStmt.setString    (2, type);
-	
-		      // execute the preparedstateme
-		      preparedStmt.execute();
-		      
-	
-		      // execute the preparedstateme
-		      preparedStmt.execute();
-			return true;
-		}
-		catch(Exception e) {
-			//System.out.println(e);
-			String s=e.getMessage();
-			//messageInCreateSq.setText(s);
-			return false;
-       }
+		SquadDBhandler s=new SquadDBhandler();
+		return s.savePlayer(shirt, type);
+		
 	}
 	public boolean removePlayer(int shirt) {
 		boolean flag=false;
